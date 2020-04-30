@@ -1,0 +1,64 @@
+-- Anonymous Functions + IIFE in React:
+
+{(function(){
+  return <Post content="Test "/>
+}())}
+
+-- OBJECT DESTRUCTURING:
+
+const fruits = {
+
+    apple: "APPLE",
+    orange: "ORANGE",
+    banana: "BANANA"
+
+}
+let { orange, banana, apple } = fruits;
+// OR: (order does NOT matter)
+// const { apple, orange, banana } = fruits;
+
+orange;
+"ORANGE"
+
+banana;
+"BANANA"
+
+apple;
+"APPLE"
+
+Another example:
+
+const React = {
+
+  useState: function(){
+    alert("useState");
+  },
+  useEffect: function(){
+    alert("useEffect");
+  }
+
+}
+const useState = React.useState;
+const useEffect = React.useEffect;
+useState();
+useEffect();
+
+CAN BE WRITTEN LIKE:
+
+const { useState, useEffect } = React;
+useState();
+useEffect();
+
+-- ARRAY DESTRUCTURING
+
+const list = [ "First", "Second", "Third" ];
+const [ first, second, thirdone ] = list;
+
+first
+"First"
+
+second
+"Second"
+
+thirdone
+"Third"
